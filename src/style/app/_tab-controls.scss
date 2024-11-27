@@ -1,0 +1,39 @@
+.tab-controls {
+  border-bottom: 1px solid var(--tab-control-color);
+  user-select: none;
+
+  &__btn {
+    @include btn-reset;
+
+    color: var(--tab-control-color);
+    background-color: transparent;
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px 5px 0 0;
+    transition:
+      background-color var(--duration-fast) ease-in-out,
+      filter var(--duration-fast) ease-in-out;
+
+    &--current {
+      pointer-events: none;
+      color: var(--tab-control-contrast);
+      background-color: var(--accent-color);
+    }
+
+    & svg {
+      width: 40px;
+      height: 40px;
+    }
+
+    @include any-hover {
+      &:hover {
+        background-color: var(--accent-20-color);
+      }
+    }
+
+    &:active {
+      filter: brightness(0.8);
+    }
+  }
+}

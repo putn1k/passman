@@ -1,0 +1,63 @@
+:root {
+  --black: #333333;
+  --black-70: rgba(51, 51, 51, 0.7);
+  --black-40: rgba(51, 51, 51, 0.4);
+  --gray-70: #3f3f3f;
+  --gray-50: #707070;
+  --gray-20: #a7a7a7;
+  --gray-10: #E6E6E6;
+  --cyan: #007397;
+  --cyan-20: rgba(0, 115, 151, 0.2);
+  --light-cyan: #00a0d3;
+  --white: #FFFFFF;
+  --white-80: rgba(255, 255, 255, 0.8);
+  --white-40: rgba(255, 255, 255, 0.4);
+  --red: #BD0300;
+
+  // theme color
+  --app-color: var(--black);
+  --app-bg: var(--white);
+  --panel-bg: var(--gray-20);
+  --border-color: var(--black);
+  --btn-color: var(--white);
+  --accent-color: var(--cyan);
+  --accent-20-color: var(--cyan-20);
+  --warning-color: var(--red);
+  --loader-overlay-bg: var(--white-80);
+  --loader-item-bg: var(--gray-20);
+  --cm-color: var(--black);
+  --cm-bg: var(--white);
+  --cm-overlay-bg: var(--black-70);
+  --tab-control-color: var(--gray-50);
+  --tab-control-contrast: var(--white);
+  --popup-color: var(--white);
+  --popup-bg: var(--black-70);
+  --setting-label-color: var(--cyan);
+  --setting-toggle-bg: var(--gray-20);
+  --setting-switch-bg: var(--white);
+
+  &.dark-theme {
+    --app-color: var(--white);
+    --app-bg: var(--black);
+    --accent-color: var(--light-cyan);
+    --panel-bg: var(--gray-70);
+    --border-color: var(--gray-20);
+    --cm-color: var(--black);
+    --cm-bg: var(--gray-10);
+    --loader-overlay-bg: var(--white-40);
+    --tab-control-color: var(--gray-20);
+    --popup-bg: var(--white-40);
+    --setting-label-color: var(--white);
+    --setting-toggle-bg: var(--gray-50);
+    --setting-switch-bg: var(--white);
+  }
+
+  // transitions
+  --duration-default: 0.3s;
+  --duration-fast: 0.15s;
+  --duration-slow: 0.4s;
+}
+
+$md: 768px;
+$xl: 1024px;
+$main-font: "PT Sans Narrow";

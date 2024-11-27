@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  @include('html/head/index.html')
+  <title>@title</title>
+</head>
+
+<body class="app@if(context.popup === 'is-show') { app--popup-show}">
+  <div class="app__logo">
+    @include('html/common/logo.html')
+  </div>
+  <div class="app__main">

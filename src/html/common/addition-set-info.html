@@ -1,0 +1,47 @@
+<fieldset class="app-fieldset">
+  <legend class="app-fieldset__title">Информация о домене</legend>
+  <label class="app-fieldset__item">
+    <span class="app-fieldset__label">Название домена</span>
+    <div class="app-fieldset__input">
+      <input class="form-input is-invalid"
+             type="text"
+             placeholder="Введите значение">
+    </div>
+  </label>
+  <label class="app-fieldset__item">
+    <span class="app-fieldset__label">URL домена</span>
+    <input class="form-input"
+           type="text"
+           placeholder="Введите значение">
+  </label>
+  <label class="app-fieldset__item">
+    <span class="app-fieldset__label">Адрес регистратора</span>
+    <input class="form-input"
+           type="text"
+           placeholder="Введите значение">
+  </label>
+  <label class="app-fieldset__item">
+    <span class="app-fieldset__label">Логин регистратора</span>
+    <div class="app-fieldset__input">
+      <input class="form-input"
+             type="text"
+             placeholder="Введите значение">
+    </div>
+  </label>
+  <label class="app-fieldset__item">
+    <span class="app-fieldset__label">Пароль регистратора</span>
+    <div class="app-fieldset__input">
+      <input class="form-input"
+             type="password"
+             placeholder="Введите значение">
+      <div class="app-fieldset__fn">
+        @include('pass-btn.html')
+      </div>
+    </div>
+  </label>
+  <label class="app-fieldset__item">
+    <span class="app-fieldset__label">Примечание</span>
+    <textarea class="form-input form-input--area"
+              placeholder="Введите значение"></textarea>
+  </label>
+</fieldset>

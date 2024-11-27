@@ -1,0 +1,11 @@
+<div class="app-context-menu @if(context.contextMenu === 'show'){ app-context-menu--show}">
+  @if(context.template === 'change') {
+  @include('context-menu-change.html')
+  }
+  @if(context.template === 'del') {
+  @include('context-menu-del.html')
+  }
+</div>
+@if(context.popup === 'is-show') {
+@include('popup.html')
+}

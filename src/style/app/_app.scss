@@ -1,0 +1,178 @@
+.app {
+  --pannel-size: 70px;
+
+  display: flex;
+  flex-direction: column;
+  height: calc(100 * var(--vh, 1vh));
+  overflow: hidden;
+
+  &--popup-show {
+    --popup-display: block;
+  }
+
+  &__logo {
+    padding: 10px 0;
+    flex-shrink: 0;
+  }
+
+  &__main {
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    flex-grow: 1;
+    overflow-y: hidden;
+    margin-bottom: 90px;
+  }
+
+  &__workflow {
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    &--preview {
+      position: absolute;
+      top: 0;
+      left: 15px;
+      right: 15px;
+      height: 100%;
+      z-index: 1;
+      color: var(--app-color);
+      background-color: var(--app-bg);
+    }
+  }
+
+  &__workflow-top {
+    width: 100%;
+    height: 46px;
+    flex-shrink: 0;
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 32px;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  &__workflow-content {
+    @include scrollbar($bar: var(--panel-bg), $thumb: var(--accent-color), $radius: 0);
+
+    flex-grow: 1;
+    overflow-y: auto;
+
+    &.is-loading {
+      --loader-visibility: visible;
+      --loader-events: auto;
+      --loader-opacity: 1;
+    }
+  }
+
+  &__workflow-bottom {
+    width: 100%;
+    height: 42px;
+    flex-shrink: 0;
+    margin-top: 10px;
+  }
+
+  &__panel {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    width: 100%;
+    height: var(--pannel-size);
+    color: var(--app-color);
+    background-color: var(--panel-bg);
+  }
+
+  &__copyright {
+    display: flex;
+    height: 100%;
+
+    & p {
+      margin: 0;
+      margin-top: auto;
+    }
+
+    & a {
+      color: inherit;
+    }
+  }
+
+  &__list {
+    @include list-reset;
+
+    display: grid;
+    row-gap: 10px;
+  }
+
+  @include media-min($md) {
+    --pannel-size: 80px;
+
+    padding-left: var(--pannel-size);
+
+    &__logo {
+      padding-left: 20px;
+    }
+
+    &__main {
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 60px;
+      margin-bottom: 0;
+    }
+
+    &__workflow {
+      &--preview {
+        left: 20px;
+        right: 20px;
+        padding-bottom: 60px;
+        height: 100%;
+      }
+    }
+
+    &__panel {
+      padding: 60px 0;
+      top: 0;
+      width: var(--pannel-size);
+      height: auto;
+    }
+  }
+
+  @include media-min($xl) {
+    --pannel-size: 150px;
+
+    &__logo {
+      padding: 30px;
+      transform: translateX(-120px);
+      z-index: 15;
+    }
+
+    &__main {
+      padding: 30px;
+      padding-top: 0;
+    }
+
+    &__workflow {
+      flex-basis: 40%;
+      flex-shrink: 0;
+      max-width: 500px;
+
+      &--preview {
+        position: static;
+        display: flex;
+        margin-left: 30px;
+        padding-bottom: 0;
+        flex-basis: calc(55% - 30px);
+        max-width: 760px;
+      }
+    }
+
+    &__panel {
+      padding: 110px 0;
+    }
+  }
+}

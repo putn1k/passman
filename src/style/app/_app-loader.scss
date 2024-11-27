@@ -1,0 +1,53 @@
+.app-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 55px;
+  width: 100%;
+  height: calc(100% - 55px);
+  z-index: 2;
+  opacity: var(--loader-opacity, 0);
+  visibility: var(--loader-visibility, hidden);
+  pointer-events: var(--loader-events, none);
+  transition:
+    visibility var(--duration-fast) ease-in-out,
+    opacity var(--duration-fast) ease-in-out;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: var(--loader-overlay-bg);
+    border-radius: 5px;
+  }
+
+  &__item {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--loader-item-bg);
+    z-index: 2;
+    animation-name: loading-flash;
+    animation-iteration-count: infinite;
+    animation-duration: 2.4s;
+
+    &:nth-child(2) {
+      animation-delay: -1.6s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: -0.8s;
+    }
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}

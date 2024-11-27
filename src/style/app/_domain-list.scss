@@ -1,0 +1,9 @@
+.domain-list {
+  @include list-reset;
+
+  &>li {
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+}

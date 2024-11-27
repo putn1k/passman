@@ -1,0 +1,25 @@
+.app-logo {
+  display: flex;
+  justify-content: center;
+
+  & svg {
+    width: 105px;
+    height: 30px;
+  }
+
+  @include media-min ($md) {
+    justify-content: flex-start;
+
+    & svg {
+      width: 126px;
+      height: 36px;
+    }
+  }
+
+  @include media-min ($xl) {
+    & svg {
+      width: 175px;
+      height: 50px;
+    }
+  }
+}

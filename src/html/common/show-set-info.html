@@ -1,0 +1,74 @@
+<fieldset class="app-fieldset">
+  <legend class="app-fieldset__title">Информация о домене</legend>
+  <label class="app-fieldset__item">
+    <span class="app-fieldset__label app-fieldset__label--readonly">Название домена</span>
+    <div class="app-fieldset__input app-fieldset__input--readonly">
+      <input class="form-input"
+             type="text"
+             value="site.ru"
+             readonly>
+      <div class="app-fieldset__fn">
+        @include('copy-btn.html')
+      </div>
+    </div>
+  </label>
+  <label class="app-fieldset__item">
+    <span class="app-fieldset__label app-fieldset__label--readonly">URL домена</span>
+    <div class="app-fieldset__input app-fieldset__input--readonly">
+      <input class="form-input"
+             type="text"
+             value="https://site.ru"
+             readonly>
+      <div class="app-fieldset__fn">
+        @include('copy-btn.html')
+      </div>
+    </div>
+  </label>
+  <label class="app-fieldset__item">
+    <span class="app-fieldset__label app-fieldset__label--readonly">Адрес регистратора</span>
+    <div class="app-fieldset__input app-fieldset__input--readonly">
+      <input class="form-input"
+             type="text"
+             value="https://timeweb.ru"
+             readonly>
+      <div class="app-fieldset__fn">
+        @include('copy-btn.html')
+      </div>
+    </div>
+  </label>
+  <label class="app-fieldset__item">
+    <span class="app-fieldset__label app-fieldset__label--readonly">Логин регистратора</span>
+    <div class="app-fieldset__input app-fieldset__input--readonly">
+      <input class="form-input"
+             type="text"
+             value="login123"
+             readonly>
+      <div class="app-fieldset__fn">
+        @include('copy-btn.html')
+      </div>
+    </div>
+  </label>
+  <label class="app-fieldset__item">
+    <span class="app-fieldset__label app-fieldset__label--readonly">Пароль регистратора</span>
+    <div class="app-fieldset__input app-fieldset__input--readonly">
+      <input class="form-input"
+             type="password"
+             value="secret"
+             readonly>
+      <div class="app-fieldset__fn">
+        @include('pass-btn.html')
+        @include('copy-btn.html')
+      </div>
+    </div>
+  </label>
+  <label class="app-fieldset__item">
+    <span class="app-fieldset__label app-fieldset__label--readonly">Примечание</span>
+    <div class="app-fieldset__input app-fieldset__input--readonly">
+      <textarea class="form-input form-input--area"
+                readonly>Заметка</textarea>
+      <div class="app-fieldset__fn">
+        @include('copy-btn.html')
+      </div>
+    </div>
+  </label>
+</fieldset>

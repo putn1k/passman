@@ -1,0 +1,64 @@
+.domain-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  font-size: 20px;
+  border: 1px dotted transparent;
+  border-radius: 0.2em;
+  transition: background-color var(--duration-fast) ease-in-out;
+
+  &.is-changed {
+    border-color: var(--accent-color);
+    background-color: var(--accent-20-color);
+  }
+
+  &:focus-within {
+    background-color: var(--accent-20-color);
+  }
+
+  @include any-hover {
+
+    &:hover {
+      background-color: var(--accent-20-color);
+    }
+  }
+
+  &__name {
+    @include btn-reset;
+
+    text-align: left;
+    flex-grow: 1;
+    outline: none;
+    padding: 7px 3px;
+  }
+
+  &__fn {
+    @include btn-reset;
+
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10' cy='3' r='1.5' fill='%23008fbb'/%3E%3Ccircle cx='10' cy='10' r='1.5' fill='%23008fbb'/%3E%3Ccircle cx='10' cy='17' r='1.5' fill='%23008fbb'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px 20px;
+    padding: 7px 3px;
+    width: 30px;
+    flex-shrink: 0;
+    outline: none;
+    filter: grayscale(1);
+
+    &:focus {
+      filter: grayscale(0);
+      background-size: 30px 30px;
+    }
+
+    @include any-hover {
+      transition:
+        filter var(--duration-fast) ease-in-out,
+        background-size var(--duration-fast) ease-in-out;
+
+      &:hover {
+        filter: grayscale(0);
+        background-size: 30px 30px;
+      }
+    }
+  }
+}

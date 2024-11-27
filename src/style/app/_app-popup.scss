@@ -1,0 +1,16 @@
+.app-popup {
+  display: var(--popup-display, none);
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 20;
+  color: var(--popup-color);
+  background-color: var(--popup-bg);
+  backdrop-filter: blur(2px);
+  font-size: 20px;
+  padding: 15px 30px;
+  border-radius: 5px;
+  animation-name: popup;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}

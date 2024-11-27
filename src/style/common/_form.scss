@@ -1,0 +1,101 @@
+.form-input {
+  font-size: 16px;
+  padding: 12px 20px;
+  width: 100%;
+  color: inherit;
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  appearance: none;
+  outline: none;
+  transition: border-color .15s ease-in-out;
+
+  &--area {
+    resize: none;
+    height: var(--input-height, 8em);
+
+    &:read-only {
+      height: auto;
+    }
+  }
+
+  &:focus-visible {
+    border-color: var(--accent-color);
+  }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:focus {
+    transition: background-color 0s 600000s, color 0s 600000s !important;
+  }
+
+  &:read-only {
+    border-color: transparent;
+    padding-top: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+    font-size: 20px;
+  }
+
+  &.is-invalid {
+    border-color: var(--warning-color);
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.25);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23BD0300'%3E%3Ccircle cx='6' cy='6' r='4.5'/%3E%3Cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3E%3Ccircle cx='6' cy='8.2' r='.6' fill='%23BD0300' stroke='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: top 4px right 4px;
+    background-size: 14px 15px;
+  }
+}
+
+.form-toggle {
+
+
+  & input {
+    @include visually-hidden;
+
+    &:checked {
+      &+span {
+        &::before {
+          background-color: var(--accent-color);
+        }
+
+        &::after {
+          transform: translateX(20px);
+        }
+      }
+    }
+  }
+
+  & span {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    color: var(--setting-label-color);
+    user-select: none;
+
+    &::before {
+      content: '';
+      display: inline-flex;
+      background-color: var(--setting-toggle-bg);
+      width: 44px;
+      height: 24px;
+      border-radius: 0.2em;
+      margin-right: 0.6em;
+      cursor: pointer;
+      transition: background-color var(--duration-fast) ease-in-out;
+    }
+
+    &::after {
+      content: '';
+      display: inline-flex;
+      position: absolute;
+      left: 2px;
+      top: 2px;
+      background-color: var(--setting-switch-bg);
+      width: 20px;
+      height: 20px;
+      border-radius: 0.2em;
+      pointer-events: none;
+      transition: transform var(--duration-fast) ease-in-out;
+    }
+  }
+}

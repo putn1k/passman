@@ -1,0 +1,68 @@
+.app-panel {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  &__btn {
+    @include btn-reset;
+
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 80px;
+    padding: 7px 0;
+    transition: backdrop-filter var(--duration-fast) ease-in-out;
+
+    & svg {
+      width: 40px;
+      height: 40px;
+    }
+
+    & span {
+      font-size: 14px;
+    }
+
+    &--current {
+      color: var(--accent-color);
+      backdrop-filter: brightness(0.9);
+      pointer-events: none;
+    }
+
+    @include any-hover {
+      &:hover {
+        backdrop-filter: brightness(0.9);
+      }
+    }
+
+    &:active {
+      backdrop-filter: brightness(0.8);
+    }
+  }
+
+  @include media-min ($md) {
+    flex-direction: column;
+    justify-content: flex-start;
+
+    &__btn {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+
+  @include media-min ($xl) {
+    align-items: flex-start;
+
+    &__btn {
+      flex-direction: row;
+      justify-content: flex-start;
+      padding-left: 20px;
+
+
+      & span {
+        font-size: 16px;
+        margin-left: 5px;
+      }
+    }
+  }
+}

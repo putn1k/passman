@@ -1,0 +1,86 @@
+@mixin media-min($screenWidth) {
+  @media (min-width: $screenWidth) {
+    @content;
+  }
+}
+
+@mixin media-max($screenWidth) {
+  @media (max-width: $screenWidth) {
+    @content;
+  }
+}
+
+@mixin font-face($font-family, $url, $weight, $style) {
+  @font-face {
+    font-family: "#{$font-family}";
+    src: url('../fonts/#{$url}.woff2') format("woff2");
+    font-weight: #{$weight};
+    font-display: swap;
+    font-style: $style;
+  }
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@mixin unset-visually-hidden {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  white-space: wrap;
+  clip-path: none;
+  clip: auto;
+  overflow: visible;
+}
+
+@mixin list-reset {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+@mixin btn-reset {
+  padding: 0;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@mixin any-hover {
+  @media (any-hover: hover) {
+    @content;
+  }
+}
+
+@mixin scrollbar($bar: transparent, $thumb: #CCCCCC, $radius: 99em, $size: 6px, $m-size: thin) {
+  @supports (-moz-appearance:none) {
+    scrollbar-color: $thumb $bar;
+    scrollbar-width: $m-size;
+  }
+
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+    background-color: $bar;
+    border-radius: $radius;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $thumb;
+    border-radius: $radius;
+  }
+}

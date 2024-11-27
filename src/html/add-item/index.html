@@ -1,0 +1,37 @@
+<div class="app__workflow">
+  <div class="app__workflow-top">
+    @include('../common/search.html')
+  </div>
+  <div class="app__workflow-content">
+    <ul class="domain-list">
+      <li class="domain-item is-changed">
+        <button class="domain-item__name"
+                type="button">site-name.com</button>
+        <button class="domain-item__fn"
+                type="button"></button>
+      </li>
+      @include('../common/domain-item.html')
+      @include('../common/domain-item.html')
+      @include('../common/domain-item.html')
+      @include('../common/domain-item.html')
+    </ul>
+  </div>
+</div>
+<div class="app__workflow app__workflow--preview">
+  <div class="app__workflow-top">
+    @include('../common/tab-controls.html')
+  </div>
+  <div class="app__workflow-content">
+    <form>
+      @include('../common/addition-set-info.html')
+    </form>
+  </div>
+  <div class="app__workflow-bottom  ">
+    <div class="flex flex--between">
+      <button class="btn"
+              type="button">Отмена</button>
+      <button class="btn"
+              type="button">Сохранить</button>
+    </div>
+  </div>
+</div>

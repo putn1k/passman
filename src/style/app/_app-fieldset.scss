@@ -1,0 +1,86 @@
+.app-fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+  row-gap: 10px;
+
+  &__title {
+    display: inline-block;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 6px;
+    margin-left: 3px;
+    margin-bottom: 10px;
+  }
+
+  &__label {
+    color: var(--accent-color);
+    margin-left: 20px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    user-select: none;
+
+    &--readonly {
+      margin-left: 0;
+    }
+  }
+
+  &__input {
+    --offset-right: 40px;
+
+    position: relative;
+    display: flex;
+    align-self: stretch;
+
+    & input {
+      padding-right: var(--offset-right);
+    }
+
+    &--readonly {
+      --offset-right: 65px;
+
+      margin-bottom: 10px;
+    }
+  }
+
+  &__fn {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    height: 20px;
+    margin-top: -10px;
+  }
+
+  &__btn {
+    @include btn-reset;
+
+    width: 20px;
+    height: 20px;
+    color: var(--app-color);
+    background-color: var(--app-bg);
+    margin-left: 6px;
+    transition:
+      color var(--duration-fast) ease-in-out,
+      filter var(--duration-fast) ease-in-out;
+
+    &--active {
+      &:active {
+        filter: opacity(0.5);
+      }
+    }
+
+    @include any-hover {
+      &:hover {
+        color: var(--accent-color);
+      }
+    }
+  }
+
+
+}

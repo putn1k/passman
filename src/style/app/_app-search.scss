@@ -1,0 +1,19 @@
+.app-search {
+  &__input {
+    height: 100%;
+    max-height: 46px;
+    background-image: url("data:image/svg+xml,%3Csvg width='30' height='31' viewBox='0 0 30 31' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.5 23C18.4706 23 22.5 18.9706 22.5 14C22.5 9.02944 18.4706 5 13.5 5C8.52944 5 4.5 9.02944 4.5 14C4.5 18.9706 8.52944 23 13.5 23Z' stroke='%23008fbb' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M25.344 26.9047C25.6369 27.1975 26.1118 27.1975 26.4047 26.9047C26.6975 26.6118 26.6975 26.1369 26.4047 25.844L25.344 26.9047ZM26.4047 25.844L20.7803 20.2197L19.7197 21.2803L25.344 26.9047L26.4047 25.844Z' fill='%23008fbb'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center right 10px;
+    background-size: 30px 31px;
+    transition:
+      background-position var(--duration-fast) ease-in-out,
+      background-size var(--duration-fast) ease-in-out;
+
+
+    &:focus {
+      background-position: top 5px right 5px;
+      background-size: 20px 21px;
+    }
+  }
+}
