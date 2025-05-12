@@ -1,11 +1,27 @@
-<button class="app-fieldset__btn password-indicator password-indicator--hide"
+<button class="app-fieldset__btn password-indicator"
         type="button"
+        @if(context.show
+        !=='false'
+        )
+        {
+        aria-label="Скрыть пароль"
+        title="Скрыть пароль"
+        }
+        @if(context.show==='false'
+        )
+        {
         aria-label="Показать пароль"
-        title="Показать пароль">
+        title="Показать пароль"
+        }>
   <svg width="20"
        height="20"
        aria-hidden="true">
-    <use xlink:href="img/sprite.svg#icon-eye-closed"></use>
-    <use xlink:href="img/sprite.svg#icon-eye"></use>
+    @show
+    @if(context.show !== 'false') {
+    <use xlink:href="assets/img/sprite.svg#icon-eye-closed"></use>
+    }
+    @if(context.show === 'false') {
+    <use xlink:href="assets/img/sprite.svg#icon-eye"></use>
+    }
   </svg>
 </button>

@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  touch-action: manipulation;
 }
 
 *,
@@ -16,6 +17,7 @@ body {
   color: var(--app-color);
   background-color: var(--app-bg);
   min-width: 375px;
+  touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
 
   @include media-min ($xl) {
