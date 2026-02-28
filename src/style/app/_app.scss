@@ -6,10 +6,6 @@
   height: calc(100 * var(--vh, 1vh));
   overflow: hidden;
 
-  &--popup-show {
-    --popup-display: block;
-  }
-
   &__logo {
     padding: 10px 0;
     flex-shrink: 0;
@@ -62,12 +58,6 @@
 
     flex-grow: 1;
     overflow-y: auto;
-
-    &.is-loading {
-      --loader-visibility: visible;
-      --loader-events: auto;
-      --loader-opacity: 1;
-    }
   }
 
   &__workflow-bottom {

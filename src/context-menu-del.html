@@ -1,5 +1,7 @@
 @include('head.html', {
 title: 'Менеджер паролей',
+menu: true,
+del: true,
 } )
 @include('html/context-menu-del/index.html')
-@include('footer.html', {contextMenu: 'show', template: 'del'})
+@include('footer.html')

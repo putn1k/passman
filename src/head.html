@@ -6,7 +6,7 @@
   <title>@title</title>
 </head>
 
-<body class="app@if(context.popup === 'is-show') { app--popup-show}">
+<body class="app@if(context.popup === true) { is-show-message}@if(context.loading === true) { is-loading}@if(context.menu === true) { is-show-menu}@if(context.action === true) { is-show-action}@if(context.del === true) { is-show-del}">
   <div class="app__logo">
     @include('html/common/logo.html')
   </div>

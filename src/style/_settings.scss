@@ -47,3 +47,25 @@ input[type="checkbox"].visually-hidden {
     justify-content: space-between;
   }
 }
+
+.is-loading {
+  --loader-visibility: visible;
+  --loader-events: auto;
+  --loader-opacity: 1;
+}
+
+.is-show-menu {
+  --context-menu-display: flex;
+}
+
+.is-show-action {
+  --action-menu-display: grid;
+}
+
+.is-show-del {
+  --del-menu-display: block;
+}
+
+.is-show-message {
+  --popup-display: block;
+}
