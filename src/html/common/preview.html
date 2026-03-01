@@ -1,0 +1,35 @@
+<div class="app__workflow app__workflow--preview">
+  <div class="app__workflow-top">
+    @include('tab-controls.html')
+  </div>
+  <div class="app__workflow-content">
+    <form>
+      @if(context.isEditable === true) {
+      @include('edit-form.html')
+      }
+      @if(context.isEditable === false) {
+      @include('show-info.html')
+      }
+    </form>
+  </div>
+  @if(context.isEditable === true) {
+  <div class="app__workflow-bottom">
+    <div class="flex flex--between">
+      <button class="btn"
+              type="button">Отмена</button>
+      <button class="btn"
+              type="button">Сохранить</button>
+    </div>
+  </div>
+  }
+  @if(context.isEditable === false) {
+  <div class="app__workflow-bottom">
+    <div class="flex flex--between">
+      <button class="btn"
+              type="button">Закрыть</button>
+      <button class="btn"
+              type="button">Изменить</button>
+    </div>
+  </div>
+  }
+</div>

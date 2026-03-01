@@ -21,31 +21,20 @@
 
   &__label {
     color: var(--accent-color);
-    margin-left: 20px;
+    margin-left: var(--label-offset-left, 20px);
     margin-bottom: 5px;
     font-size: 14px;
     user-select: none;
-
-    &--readonly {
-      margin-left: 0;
-    }
   }
 
   &__input {
-    --offset-right: 40px;
-
     position: relative;
     display: flex;
     align-self: stretch;
+    margin-bottom: var(--input-offset-bottom, 0);
 
-    & input {
-      padding-right: var(--offset-right);
-    }
-
-    &--readonly {
-      --offset-right: 65px;
-
-      margin-bottom: 10px;
+    & .form-input {
+      padding: var(--input-padding, 12px 65px 12px 20px);
     }
   }
 

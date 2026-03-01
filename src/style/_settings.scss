@@ -69,3 +69,9 @@ input[type="checkbox"].visually-hidden {
 .is-show-message {
   --popup-display: block;
 }
+
+.is-readonly {
+  --label-offset-left: 0;
+  --input-offset-bottom: 10px;
+  --input-padding: 0 65px 0 0;
+}

@@ -4,29 +4,11 @@
   </div>
   <div class="app__workflow-content">
     <ul class="domain-list">
+      @include('../common/domain-item.html')
       @include('../common/domain-item.html', {changed: true})
       @include('../common/domain-item.html')
       @include('../common/domain-item.html')
       @include('../common/domain-item.html')
-      @include('../common/domain-item.html')
     </ul>
-  </div>
-</div>
-<div class="app__workflow app__workflow--preview">
-  <div class="app__workflow-top">
-    @include('../common/tab-controls.html')
-  </div>
-  <div class="app__workflow-content">
-    <form>
-      @include('../common/addition-set-info.html')
-    </form>
-  </div>
-  <div class="app__workflow-bottom  ">
-    <div class="flex flex--between">
-      <button class="btn"
-              type="button">Отмена</button>
-      <button class="btn"
-              type="button">Сохранить</button>
-    </div>
   </div>
 </div>

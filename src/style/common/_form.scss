@@ -30,9 +30,6 @@
 
   &:read-only {
     border-color: transparent;
-    padding-top: 0;
-    padding-left: 0;
-    padding-bottom: 0;
     font-size: 20px;
   }
 
@@ -47,8 +44,6 @@
 }
 
 .form-toggle {
-
-
   & input {
     @include visually-hidden;
 
