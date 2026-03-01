@@ -36,7 +36,7 @@
   --setting-toggle-bg: var(--gray-20);
   --setting-switch-bg: var(--white);
 
-  &.dark-theme {
+  .dark-theme {
     --app-color: var(--white);
     --app-bg: var(--black);
     --accent-color: var(--light-cyan);
